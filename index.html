@@ -1,16 +1,358 @@
----
-layout: splash
-classes:
-  - landing
-  - dark-theme
----
+<!DOCTYPE html>
+<html lang="en">
 
-{% include base_path %}
+<head>
+	<meta charset="utf-8">
+	<title>Ben Wells</title>
+	<meta name="description" content="Ben Wells's personal portfolio">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<!-- Latest compiled and minified CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+	<!-- Fonts-->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Knewave">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lilita+One">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
 
-{% include paginator.html %}
+	<style>
+		body{
+			padding-top: 40px;
+			background-color: #fff;
+			color:#3e3e3e;
+		}
+		h1{
+			font-family:'Lilita One';
+			color:#000;
+		}
+		h2{
+			text-align: center;
+			font-family:'Lilita One';
+			color:#0d72a9;
+			font-size: 45px;
+		}
+		h3{
+			font-family:'Open Sans';
+			color:#2baae2;
+			font-size: 30px;
+			font-weight:800;
+		}
+		h4{
+			font-family:'Open Sans';
+			color:#7dd1f8;
+		}
+		p{
+			font-family:'Open Sans';
+			letter-spacing: 2px;
+			line-height: 150%;
+			font-size: 18px;
+		}
+		div.container .nav-button-ben a{
+			font-family:'Open Sans';
+			letter-spacing: 2px;
+			line-height: 150%;
+			font-size: 18px;
+			color: #2baae2;
+			transition: background-color 0.35s ease, color 0.2s ease;
+			background-color: transparent;
+		}
+		div.container .nav-button-ben a:hover{
+			color: #fff;
+			background-color: #2baae2;
+			 
+		}
+		a{
+			transition: color 0.2s ease;
+			color:#2baae2;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #0d72a9;
+		}
+		.no-border{
+			border: 0;
+		}
+		.titlebox{
+			margin:0;
+			background-color: #7dd1f8;
+		}
+		.titletext{
+			color:#000;
+			padding: 80px 0 20px 0;
+		}
+		.titletext h1{
+			font-family:Knewave;
+			font-size: 100px;
+		}
+		.titleimage{
+			margin: 0 auto;
+			max-width: 800px;
+		}
+		.background-blue{
+			background-color: #2baae2;
+			color:#fff;
+		}
+		.whited h1 {
+			color: #fff;
+		}
+		.whited h2 {
+			color: #fff;
+		}
+		.whited h3 {
+			color: #fff;
+		}
+		.whited p {
+			color: #fff;
+		}
+		.padding-0{
+			padding: 0;
+		}
+		.padding-0 img {
+    		width: 100%;
+		}
+		.image-bar{
+			margin: -1px 0;
+			width: 100%;
+			overflow: hidden;
+		}
+		.image-bar img{
+
+			position: relative;
+			width:104%;
+			left: -2%;
+		}
+		.panel{
+			background-color: #7dd1f8;
+			border-radius: 20px;
+			border-color:transparent;
+			padding: 5%;
+		}
+		.aboutme .row{
+			margin: 50px 0;
+		}
+		.btn-ben{
+			background-color: #2baae2;
+			border-radius: 30px;
+			color: white;
+			font-family:'Lilita One';
+			font-size: 20px;
+			padding: 15px 35px;
+			letter-spacing: 1px;
+			transition: background-color 0.2s ease;
+		}
+		.btn-ben:hover{
+			background-color: #7dd1f8;
+			color: #fff;
+		}
+		.btn-ben:active{
+			background-color: #7dd1f8;
+			color: #fff;
+		}
+		.ben-logo a{
+			padding: 0 25px;
+		}
+		.ben-logo img{
+			height:100%;
+		}
+		.row-large-margin{
+			margin: 35px 15px;
+		}	
+		.image-upper-margin{
+			margin-top: 60px;
+		}
+		.excessive-vertical-margin{
+			margin: 75px 0;
+		}
+		.portfolio-picture{
+			border-radius: 10px;
+			overflow:hidden;
+		}
+		.portfolio-picture img{
+			width:100%;
+		}
+	</style>
+<body>
+
+	<!--Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top no-border" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header"><!-- Start navbar header-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="ben-logo">
+					<a href="#home" class="navbar-brand"><img src="img/portrait.svg"></a>
+				</div>
+			</div><!-- End navbar header-->
+
+			<div class="collapse navbar-collapse " id="navbar-collapse">
+				<ul class="nav navbar-nav nav-button-ben">
+					<li><a href="#hi">Welcome</a>
+					<li><a href="#about">About me</a>
+					<li><a href="#portfolio">My Portfolio</a>
+					<li><a href="#contact">Contact me</a>
+				</ul>
+			</div>
+		</div> <!-- End container-->
+	</nav>
+
+
+	<div class="titlebox whited" id="home">
+		<div class="container text-center titletext">
+			<h1>Ben Wells</h1>
+			<h2>Game Development and Design</h2>
+		</div>
+		<div class="titleimage">
+			<div class="imageholder padding-0">
+		        <img src="img/top-picture.svg" />
+			</div>	
+		</div>
+		<div class="container text-center titletext">
+			<a href="#portfolio"><i>Here for my portfolio?</i></a>
+		</div>
+		<div class="titlebar padding-0 image-bar" id="hi">
+			<img src="img/bar-1.svg" />
+		</div>
+	</div>
+
+	<div class="aboutme background-blue whited">
+	<div class="container">
+		<section>
+		<div class="row">
+			<div class="personal-intro col-md-4 col-md-offset-4 text-center">
+				<div class="span4"><img class="center-block" src="img/portrait.svg" /></div>
+				<h1>Hi. I'm Ben.</h1>
+				<p>I'm a Swiss-born, London-based Game Developer and Designer.</p>
+				<p>I love making games, be they professionally developed, or personal projects.</p>
+				<p>I also make art, music, educational videos, and this website!</p>
+			</div>
+		</div>
+		</section>
+		</div>
+		</div>
+
+
+
+	    <div class="col-md-12 padding-0 image-bar">
+	        <img src="img/bar-0.svg" id="about"/>
+	    </div>    
+
+	<!-- Games-->
+	<div class="container">
+		<section>
+
+			<h2>About me</h2>
+			<div class="row row-large-margin">
+				<div class="col-md-6 col-md-push-6 image-upper-margin">
+					<img src="img/storyline-0.svg" class="center-block img-responsive" alt="image">
+				</div>
+				<div class="col-md-6 col-md-pull-6 column-text">
+					<h3>I like making games</h3>
+					<p>Starting when I was 10, most of my life decisions have revolved around making games. I studied Computer Science at University, where I created an AI game developer for my dissertation, ran the Game Design society, and participated in countless game jams.</p>
+					<p>I've since moved on to making educational games professionally. I've made a fair few games, which you can check out <a href="#portfolio">here</a>.</p>
+				</div>
+			</div>
+			<div class="row row-large-margin">
+				<div class="col-md-6 image-upper-margin">
+					<img src="img/storyline-1.svg" class="center-block img-responsive" alt="image">
+				</div>
+				<div class="col-md-6 column-text">
+					<h3>I like programming</h3>
+					<p>Making games got me into programming, which lead to me taking a BSc in Computer Science at the University of Warwick, and my subsequent role as a developer and designer at <a href="https://codekingdoms.com" target="_blank">Code Kingdoms</a>.</p>
+					<p>I'm a full stack developer, but my favourite aspects of programming have so far been front end development, fine tuning game mechanics, API development, and writing unit tests.</p>
+				</div>
+			</div>
+			<div class="row row-large-margin">
+				<div class="col-md-6 col-md-push-6 image-upper-margin">
+					<img src="img/storyline-2.svg" class="center-block img-responsive" alt="image">
+				</div>
+				<div class="col-md-6 col-md-pull-6 column-text">
+					<h3>I like most things, really</h3>
+					<p>I have a love of learning above all else, which has lead me to all kinds of hobbies. I enjoy digital art, composing and performing music, dialogue writing, video production and editing.</p>
+					<p>I also have a few less relevant hobbies, such as skiing, hiking, competitive gaming, and kitchen experimentation.</p>
+				</div>
+			</div>
+
+		</section>
+	</div> <!-- End games-->
+
+	<div class="titlebar padding-0 image-bar">
+		<img src="img/bar-1.svg" id="portfolio"/>
+	</div>
+	<div class="whited background-blue">
+		<div class="container">
+			<section>
+				<h2>Portfolio Highlights</h2>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<div class="portfolio-picture">
+									<img src="screen/scrn-ck.png">
+								</div>
+								<h3>Code Kingdoms Game</h3>
+								<p>An adventure game where players must solve and create puzzles, by coding in an in-built Javascript editor</p>
+								<p>Explore a multitude of lands, sequencing code to lead animals to safety, programming your own defensive obstacles, and fighting evil glitches.</p>
+								<p>A game I professionally contributed towards as part of my role at <a href="https://codekingdoms.com">Code Kingdoms</a>.</p>
+							</div>
+						</div>	
+					</div>
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<div class="portfolio-picture">
+									<img src="screen/scrn-esc.jpg">
+								</div>
+								<h3>ESC</h3>
+								<p>A game on the subject of domestic violence.</p>
+								<p>You play as a married woman, exploring a cave with her husband, during the "honeymoon" phase of a cycle of abuse. Your descent into the cave is mirrored by the descent into the cycle.</p>
+								<p>Created for the 48h competition Ludum Dare 29, theme "Beneath the Surface", where it finished 32nd out of 1491 entrants.</p>
+							</div>
+						</div>	
+					</div>
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<div class="portfolio-picture">
+									<img src="screen/scrn-pck.jpg">
+								</div>
+								<h3>Purging Cuddle Kingdoms</h3>
+								<p>An arcade shooter where you your weapons.</p>
+								<p>Reviewers described it as "A bullet hell, where you play as the bullet hell", in a game where the mighty warrior princess mounts a magnet based last ditch defence against the unstoppable forces of evil.</p>
+								<p>Created for the 48h competition Ludum Dare 32, theme "Unusual Weapon", where it finished 44th out of 1353 entrants.</p>
+						</div>	
+					</div>
+				</div><!-- End row-->
+			</section>
+		</div>
+	</div>
+			
+
+	    <div class="col-md-12 padding-0 image-bar">
+	        <img src="img/bar-0.svg"/>
+	    </div>    
+
+	<section id="contact" class="excessive-vertical-margin">
+			<div class="container text-center">
+				<h3>Say hi!</h3>
+				<p>If you want to talk about anything, hit me up with an email!</p>
+				<a href="mailto:ben.ja.wells@gmail.com" class="btn btn-ben">Email</a>
+			</div>
+	</section>
+
+	<div class="titlebar padding-0 image-bar">
+		<img src="img/bar-1.svg" id="portfolio"/>
+	</div>
+	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
