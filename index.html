@@ -32,21 +32,21 @@
 			z-index: 1;
 		}
 		h1{
-			font-family:'Lilita One';
+			font-family:gangOfThree;
 			color:#000;
 			position: relative;
 			z-index: 1;
 		}
 		h2{
 			text-align: center;
-			font-family:'Lilita One';
+			font-family:gangOfThree;
 			color:#6C4523;
 			font-size: 45px;
 			position: relative;
 			z-index: 1;
 		}
 		h3{
-			font-family:'Open Sans';
+			font-family:gangOfThree;
 			color:#719db0;
 			font-size: 30px;
 			font-weight:800;
@@ -89,6 +89,9 @@
 		a:hover{
 			color: #6C4523;
 		}
+		img.logo{
+			padding: 20px 0px;
+		}
 		.no-border{
 			border: 0;
 		}
@@ -108,7 +111,6 @@
 		}
 		.titleimage{
 			margin: 0 auto;
-			max-width: 800px;
 		}
 		.background-blue{
 			background-color: #719db0;
@@ -131,13 +133,20 @@
 			text-shadow: 2px 2px rgba(0,0,0,0.5);
 		}
 		.whited h3 {
-			color: #fff;
+			color: #6C4523;
 		}
 		.whited p {
 			color: #fff;
 		}
+		.post-cloud{
+
+		}
 		.padding-0{
 			padding: 0;
+		}
+		.padding-0.image-bar{
+			padding: 0;
+			margin: -99px 0;
 		}
 		.padding-0 img {
     		width: 100%;
@@ -166,7 +175,7 @@
 			background-color: #719db0;
 			border-radius: 30px;
 			color: white;
-			font-family:'Lilita One';
+			font-family:gangOfThree;
 			font-size: 20px;
 			padding: 15px 35px;
 			letter-spacing: 1px;
@@ -202,6 +211,15 @@
 		.portfolio-picture img{
 			width:100%;
 		}
+		.more-padding{
+			padding: 40px 0 10px 0;
+		}
+		.more-margin{
+			padding: 155px 0 0 0;
+		}
+		.more-margin{
+			padding: 155px 0 0 0;
+		}
 	</style>
 <body>
 
@@ -210,15 +228,14 @@
 		<div class="container text-center titletext">
 			<img src="img/title.svg" class="sign">
 			<h1>Samu Rise</h1>
-			<h2>The hunt for a worthy challenge</h2>
+			<h2>High speed sword slashing combat</h2>
+			<h3><i>A Jelly Machete game</i></h3>
 		</div>
 		<div class="titleimage">
 			<div class="imageholder padding-0">
 		        <img src="img/top-picture.svg" />
 			</div>	
 		</div>
-		<div class="container text-center titletext">
-			<a href="#portfolio"><i>Buy now</i></a>
 		</div>
 		<div class="titlebar padding-0 image-bar" id="hi">
 			<img src="img/bar-1.svg" />
@@ -230,13 +247,14 @@
 		<section>
 		<div class="row">
 			<div class="personal-intro col-md-6 col-md-offset-3 text-center">
-				<div class="span4"><img class="center-block" src="img/portrait.svg" /></div>
+				<div class="span4"><img class="center-block logo" src="img/icon.svg" /></div>
 
 			<img src="img/title.svg" class="sign sign-padded">
 				<h1>The hunt for a worthy challenge</h1>
-				<p>I'm a Swiss-born, London-based Game Developer and Designer.</p>
-				<p>I love making games, be they professionally developed, or personal projects.</p>
-				<p>I also make art, music, educational videos, and this website!</p>
+				<div class="more-padding">
+					<p>Samu Rise is a high speed arcade slash 'em up, with a focus on smooth flowing combat, rewarding skillful play, and enabling the player to pull of incredible chains of moves.</p>
+					<p>The game follows a lone Samurai, seeking a worthy challenge. They place a bounty on their own head, in order to attract mercenaries to fight. Money earned in battle is immediately reinvested into more numerous and dangerous enemies to fight.</p>
+				</div>
 			</div>
 		</div>
 		</section>
@@ -245,14 +263,14 @@
 
 
 
-	    <div class="col-md-12 padding-0 image-bar">
+	    <div class="col-md-12 image-bar">
 	        <img src="img/bar-1.svg" id="about"/>
 	    </div>    
 
 	<!-- Games-->
 	<div class="container">
 		<section>
-			<h2>Key Features</h2>
+			<h2 class="more-margin">Key Features</h2>
 			<div class="row row-large-margin">
 				<div class="col-md-6 col-md-push-6 image-upper-margin">
 					<img src="img/storyline-0.svg" class="center-block img-responsive" alt="image">
@@ -269,9 +287,9 @@
 					<img src="img/storyline-1.svg" class="center-block img-responsive" alt="image">
 				</div>
 				<div class="col-md-6 column-text">
-					<h3>A casual game for non-casuals</h3>
-					<p>This is no 30 hour epic with a heartwarming story, beautifully animated cutscenes and a deep moral choice system.</p>
-					<p>This game lets you start, slaughter unworthy foes, and leave with a pumping heart in the time it took for your tea to boil.</p>
+					<h3>A casual game for hardcore players</h3>
+					<p>Samu Rise is a game with a simple core, which you can pick up quickly, and master over time.</p>
+					<p>At its heart, the game is designed to be picked up for quick play sessions. You can start, slaughter unworthy foes, and leave with a pumping heart in the time it takes for your tea to boil.</p>
 					<p></p>
 				</div>
 			</div>
@@ -296,48 +314,17 @@
 	<div class="whited background-blue">
 		<div class="container">
 			<section>
-				<h2>Portfolio Highlights</h2>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="panel panel-default text-center">
-							<div class="panel-body">
-								<div class="portfolio-picture">
-									<img src="screen/scrn-ck.png">
-								</div>
-								<h3>Code Kingdoms Game</h3>
-								<p>An adventure game where players must solve and create puzzles, by coding in an in-built Javascript editor</p>
-								<p>Explore a multitude of lands, sequencing code to lead animals to safety, programming your own defensive obstacles, and fighting evil glitches.</p>
-								<p>A game I professionally contributed towards as part of my role at <a href="https://codekingdoms.com">Code Kingdoms</a>.</p>
-							</div>
-						</div>	
+			<div class="row">
+				<div class="personal-intro col-md-6 col-md-offset-3 text-center">
+
+				<img src="img/title.svg" class="sign sign-padded">
+					<h1>Buy Samu Rise</h1>
+					<div class="more-padding">
+				<p>Samu Rise hasn't been released yet. It is currently scheduled to launch on the 3rd of November 2016.</p>
+				<p>For more information, contact us via Email, on Twitter, or check out our presskit!</p>
 					</div>
-					<div class="col-lg-4">
-						<div class="panel panel-default text-center">
-							<div class="panel-body">
-								<div class="portfolio-picture">
-									<img src="screen/scrn-esc.jpg">
-								</div>
-								<h3>ESC</h3>
-								<p>A game on the subject of domestic violence.</p>
-								<p>You play as a married woman, exploring a cave with her husband, during the "honeymoon" phase of a cycle of abuse. Your descent into the cave is mirrored by the descent into the cycle.</p>
-								<p>Created for the 48h competition Ludum Dare 29, theme "Beneath the Surface", where it finished 32nd out of 1491 entrants.</p>
-							</div>
-						</div>	
-					</div>
-					<div class="col-lg-4">
-						<div class="panel panel-default text-center">
-							<div class="panel-body">
-								<div class="portfolio-picture">
-									<img src="screen/scrn-pck.jpg">
-								</div>
-								<h3>Purging Cuddle Kingdoms</h3>
-								<p>An arcade shooter where you your weapons.</p>
-								<p>Reviewers described it as "A bullet hell, where you play as the bullet hell", in a game where the mighty warrior princess mounts a magnet based last ditch defence against the unstoppable forces of evil.</p>
-								<p>Created for the 48h competition Ludum Dare 32, theme "Unusual Weapon", where it finished 44th out of 1353 entrants.</p>
-						</div>	
-					</div>
-				</div><!-- End row-->
-			</section>
+				</div>
+			</div>
 		</div>
 	</div>
 			
