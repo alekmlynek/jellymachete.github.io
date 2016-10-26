@@ -14,93 +14,121 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<!-- Fonts-->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Knewave">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=gangOfThree">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lilita+One">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
 
 	<style>
+		@font-face {
+	    font-family: gangOfThree;
+	    src: url(gangOfThree.ttf);
+		}
+
 		body{
-			padding-top: 40px;
 			background-color: #fff;
 			color:#3e3e3e;
+			position: relative;
+			z-index: 1;
 		}
 		h1{
 			font-family:'Lilita One';
 			color:#000;
+			position: relative;
+			z-index: 1;
 		}
 		h2{
 			text-align: center;
 			font-family:'Lilita One';
-			color:#f9b970;
+			color:#6C4523;
 			font-size: 45px;
+			position: relative;
+			z-index: 1;
 		}
 		h3{
 			font-family:'Open Sans';
-			color:#6ba5a4;
+			color:#719db0;
 			font-size: 30px;
 			font-weight:800;
+			position: relative;
+			z-index: 1;
 		}
 		h4{
 			font-family:'Open Sans';
-			color:#83c8c4;
+			color:#90c2d8;
+			position: relative;
+			z-index: 1;
 		}
 		p{
 			font-family:'Open Sans';
 			letter-spacing: 2px;
 			line-height: 150%;
 			font-size: 18px;
+			position: relative;
+			z-index: 1;
 		}
 		div.container .nav-button-ben a{
 			font-family:'Open Sans';
 			letter-spacing: 2px;
 			line-height: 150%;
 			font-size: 18px;
-			color: #6ba5a4;
+			color: #719db0;
 			transition: background-color 0.35s ease, color 0.2s ease;
 			background-color: transparent;
 		}
 		div.container .nav-button-ben a:hover{
 			color: #fff;
-			background-color: #6ba5a4;
+			background-color: #719db0;
 			 
 		}
 		a{
 			transition: color 0.2s ease;
-			color:#6ba5a4;
+			color:#719db0;
 			text-decoration: none;
 		}
 		a:hover{
-			color: #f9b970;
+			color: #6C4523;
 		}
 		.no-border{
 			border: 0;
 		}
 		.titlebox{
 			margin:0;
-			background-color: #83c8c4;
+			background-color: #90c2d8;
 		}
 		.titletext{
 			color:#000;
-			padding: 80px 0 20px 0;
+			padding: 20px 0 20px 0;
+			position: relative;
 		}
 		.titletext h1{
-			font-family:Knewave;
+			font-family:gangOfThree;
 			font-size: 100px;
+			text-shadow: 2px 2px rgba(0,0,0,0.5);
 		}
 		.titleimage{
 			margin: 0 auto;
 			max-width: 800px;
 		}
 		.background-blue{
-			background-color: #6ba5a4;
+			background-color: #719db0;
 			color:#fff;
 		}
 		.whited h1 {
-			color: #f9b970;
+			color: #6C4523;
+		}
+		.sign {
+			position: absolute;
+			left: 0;
+		}
+		.sign.sign-padded{
+			padding: 0 15px;
+			height: auto;
 		}
 		.whited h2 {
-			color: #ea575b;
+			font-family:gangOfThree;
+			color: #6C4523;
+			text-shadow: 2px 2px rgba(0,0,0,0.5);
 		}
 		.whited h3 {
 			color: #fff;
@@ -115,7 +143,7 @@
     		width: 100%;
 		}
 		.image-bar{
-			margin: -1px 0;
+			margin: -73px 0;
 			width: 100%;
 			overflow: hidden;
 		}
@@ -126,7 +154,7 @@
 			left: -2%;
 		}
 		.panel{
-			background-color: #83c8c4;
+			background-color: #90c2d8;
 			border-radius: 20px;
 			border-color:transparent;
 			padding: 5%;
@@ -135,7 +163,7 @@
 			margin: 50px 0;
 		}
 		.btn-ben{
-			background-color: #6ba5a4;
+			background-color: #719db0;
 			border-radius: 30px;
 			color: white;
 			font-family:'Lilita One';
@@ -145,11 +173,11 @@
 			transition: background-color 0.2s ease;
 		}
 		.btn-ben:hover{
-			background-color: #83c8c4;
+			background-color: #90c2d8;
 			color: #fff;
 		}
 		.btn-ben:active{
-			background-color: #83c8c4;
+			background-color: #90c2d8;
 			color: #fff;
 		}
 		.ben-logo a{
@@ -177,36 +205,12 @@
 	</style>
 <body>
 
-	<!--Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top no-border" id="my-navbar">
-		<div class="container">
-			<div class="navbar-header"><!-- Start navbar header-->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class="ben-logo">
-					<a href="#home" class="navbar-brand"><img src="img/portrait.svg"></a>
-				</div>
-			</div><!-- End navbar header-->
-
-			<div class="collapse navbar-collapse " id="navbar-collapse">
-				<ul class="nav navbar-nav nav-button-ben">
-					<li><a href="#hi">Welcome</a>
-					<li><a href="#about">About me</a>
-					<li><a href="#portfolio">My Portfolio</a>
-					<li><a href="#contact">Contact us</a>
-				</ul>
-			</div>
-		</div> <!-- End container-->
-	</nav>
-
 
 	<div class="titlebox whited" id="home">
 		<div class="container text-center titletext">
-			<h1>Jelly Machete</h1>
-			<h2>Indie Games for people who git gud</h2>
+			<img src="img/title.svg" class="sign">
+			<h1>Samu Rise</h1>
+			<h2>The hunt for a worthy challenge</h2>
 		</div>
 		<div class="titleimage">
 			<div class="imageholder padding-0">
@@ -214,7 +218,7 @@
 			</div>	
 		</div>
 		<div class="container text-center titletext">
-			<a href="#portfolio"><i>Here for my portfolio?</i></a>
+			<a href="#portfolio"><i>Buy now</i></a>
 		</div>
 		<div class="titlebar padding-0 image-bar" id="hi">
 			<img src="img/bar-1.svg" />
@@ -225,8 +229,10 @@
 	<div class="container">
 		<section>
 		<div class="row">
-			<div class="personal-intro col-md-4 col-md-offset-4 text-center">
+			<div class="personal-intro col-md-6 col-md-offset-3 text-center">
 				<div class="span4"><img class="center-block" src="img/portrait.svg" /></div>
+
+			<img src="img/title.svg" class="sign sign-padded">
 				<h1>The hunt for a worthy challenge</h1>
 				<p>I'm a Swiss-born, London-based Game Developer and Designer.</p>
 				<p>I love making games, be they professionally developed, or personal projects.</p>
@@ -240,21 +246,21 @@
 
 
 	    <div class="col-md-12 padding-0 image-bar">
-	        <img src="img/bar-0.svg" id="about"/>
+	        <img src="img/bar-1.svg" id="about"/>
 	    </div>    
 
 	<!-- Games-->
 	<div class="container">
 		<section>
-
 			<h2>Key Features</h2>
 			<div class="row row-large-margin">
 				<div class="col-md-6 col-md-push-6 image-upper-margin">
 					<img src="img/storyline-0.svg" class="center-block img-responsive" alt="image">
 				</div>
 				<div class="col-md-6 col-md-pull-6 column-text">
-					<h3>Fast paced gameplay</h3>
-					<p>Any successful attack is rewarded with no cooldown. String blow after blow, deflecting all attacks, cut down enemies with theirs swords as much as your own. Become unstoppable.</p>
+					<h3>Fast paced swordplay</h3>
+					<p>Mastering Samu Rise requires quick thinking, immaculate timing, and a love of looking amazing while you style out on your opponents.</p>
+					<p>Successful attacks can be strung together almost immediately, and endlessly. But miss once, and you leave your enemy with an opening, and yourself with no defences.</p>
 					<p></p>
 				</div>
 			</div>
@@ -263,10 +269,10 @@
 					<img src="img/storyline-1.svg" class="center-block img-responsive" alt="image">
 				</div>
 				<div class="col-md-6 column-text">
-					<h3>Games for the curious</h3>
-					<p>Games are all about discovery, be it discovering new lands, or just discovering an overpowered Ken combo. And there's no journey of discovery quite like building games.</p>
-					<p>We have a commitment to sharing the journey of game development with any who want, through blog posts, livestreams, talks, and more.</p>
-					<p>We're pretty keen on transparency, and we hope to be able to answer any unintrusive questions you might have honestly and openly.</p>
+					<h3>A casual game for non-casuals</h3>
+					<p>This is no 30 hour epic with a heartwarming story, beautifully animated cutscenes and a deep moral choice system.</p>
+					<p>This game lets you start, slaughter unworthy foes, and leave with a pumping heart in the time it took for your tea to boil.</p>
+					<p></p>
 				</div>
 			</div>
 			<div class="row row-large-margin">
@@ -274,9 +280,10 @@
 					<img src="img/storyline-2.svg" class="center-block img-responsive" alt="image">
 				</div>
 				<div class="col-md-6 col-md-pull-6 column-text">
-					<h3>Remember the memorable</h3>
-					<p>I have a love of learning above all else, which has lead me to all kinds of hobbies. I enjoy digital art, composing and performing music, dialogue writing, video production and editing.</p>
-					<p>I also have a few less relevant hobbies, such as skiing, hiking, competitive gaming, and kitchen experimentation.</p>
+					<h3>Level up your skill, not your abilities</h3>
+					<p>Why buy upgrades, when you're already amazing? There's only one way to level up in Samu Rise, and that's to get better at it.</p>
+					<p>Instead, money earned through combat lets you upgrade your enemies. When you get good enough that your enemies are no longer challenging you, choose exactly what flavour of pain you want to invite into your world.</p>
+					<p>Pirates? Knights? Or just more things to kill? Your choice!</p>
 				</div>
 			</div>
 
@@ -334,26 +341,6 @@
 		</div>
 	</div>
 			
-
-	    <div class="col-md-12 padding-0 image-bar">
-	        <img src="img/bar-0.svg"/>
-	    </div>    
-
-	<section id="contact" class="excessive-vertical-margin">
-			<div class="container text-center">
-				<h3>Say hi!</h3>
-				<p>For business enquiries, questions, or declarations of blood feuds, email's the answer.</p>
-				<a href="mailto:ben.ja.wells@gmail.com" class="btn btn-ben">Email</a>
-			</div>
-	</section>
-
-	<div class="titlebar padding-0 image-bar">
-		<img src="img/bar-1.svg" id="portfolio"/>
-	</div>
-	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 
 </body>
 </html>
